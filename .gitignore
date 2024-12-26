@@ -1,0 +1,5 @@
+# Ignore system files
+.helmdata # helm config folder
+.dp-tmp   # cache folder
+unifie.cloud/helm/evershop/templates/ingress.yaml
+unifie.cloud/helm/*.tgz
