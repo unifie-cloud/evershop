@@ -8,11 +8,14 @@ global:
       password: ""
       database: ""
       port: ""
-      host: "" 
- 
+      host: ""
+
 db:
   database: ""
   port: ""
-  host: "" 
-  username: "" 
-  password: "" 
+  host: ""
+  username: ""
+  password: ""
+
+evershop:
+  image: "evershop/evershop:latest"

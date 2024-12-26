@@ -1,6 +1,6 @@
 name: evershop
 uiType: helm
-helmRepositoryName: evershop
+helmRepositoryName: unifie
 helmRepositoryChartName: evershop
 rules:
   - varName: db
@@ -57,6 +57,24 @@ rules:
     varApplyMethod: method_replace
     UIVarValidationRules: []
     UIVarInputType: string
+  - varName: evershop
+    varValueType: object
+    varValueSrcType: src_hardcoded
+    hardcodedDefaultValue: '{"image":"evershop/evershop:latest"}'
+    refToSpecVar: ''
+    UIVarTitle: evershop
+    varApplyMethod: method_replace
+    UIVarValidationRules: []
+    UIVarInputType: string
+  - varName: evershop.image
+    varValueType: string
+    varValueSrcType: src_deployment_ui
+    hardcodedDefaultValue: evershop/evershop:latest
+    refToSpecVar: ''
+    UIVarTitle: Docker image
+    varApplyMethod: method_replace
+    UIVarValidationRules: []
+    UIVarInputType: string
   - varName: global
     varValueType: object
     varValueSrcType: src_hardcoded
@@ -75,6 +93,15 @@ rules:
     varApplyMethod: method_replace
     UIVarValidationRules: []
     UIVarInputType: string
+  - varName: global.postgresql.auth.host
+    varValueType: string
+    varValueSrcType: src_hardcoded
+    hardcodedDefaultValue: ''
+    refToSpecVar: ''
+    UIVarTitle: global.postgresql.auth.host
+    varApplyMethod: method_replace
+    UIVarValidationRules: []
+    UIVarInputType: string
   - varName: global.postgresql.auth.password
     varValueType: string
     varValueSrcType: src_deployment_ui
@@ -84,6 +111,15 @@ rules:
     varApplyMethod: method_replace
     UIVarValidationRules: []
     UIVarInputType: password
+  - varName: global.postgresql.auth.port
+    varValueType: string
+    varValueSrcType: src_hardcoded
+    hardcodedDefaultValue: ''
+    refToSpecVar: ''
+    UIVarTitle: global.postgresql.auth.port
+    varApplyMethod: method_replace
+    UIVarValidationRules: []
+    UIVarInputType: string
   - varName: global.postgresql.auth.username
     varValueType: string
     varValueSrcType: src_deployment_ui
@@ -108,3 +144,5 @@ monitoring:
   - host: '{{ .deployment.domain }}'
     path: /
     timeout: 30000
+helmRepositoryURL: https://unifie-cloud.github.io/charts/helm
+helmRepositoryVersion: '1.0'

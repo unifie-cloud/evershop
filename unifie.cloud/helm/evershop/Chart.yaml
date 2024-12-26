@@ -3,14 +3,14 @@ description: NodeJS E-commerce Platform
 home: https://github.com/evershopcommerce/evershop
 icon: https://avatars.githubusercontent.com/u/83757778?s=48&v=4
 keywords:
-  - ecommerce
-  - shop
-  - postgresql
-  - react
+- ecommerce
+- shop
+- postgresql
+- react
 maintainers:
-  - email: Levhav@yandex.com
-    name: Victor.Trapenok
+- email: Levhav@yandex.ru
+  name: VictorTrapenok
 name: evershop
 sources:
-  - https://github.com/unifie-cloud/evershop/helm/evershop
-version: 1.0
+- https://github.com/unifie-cloud/evershop/helm/evershop
+version: "1.0"
